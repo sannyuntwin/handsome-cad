@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #d7dce4;
+  --bg-panel: #f2f4f8;
+  --bg-panel-2: #e4e8ef;
+  --line: #aab4c3;
+  --text-main: #1f2a3a;
+  --text-muted: #5f6f85;
+  --accent: #0e6bb8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(112, 155, 204, 0.2), transparent 36%),
+    radial-gradient(circle at 80% 76%, rgba(186, 203, 227, 0.28), transparent 42%),
+    linear-gradient(155deg, #d4d9e2 0%, #dbe1e9 45%, #ced5df 100%);
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+}
+
+code,
+pre,
+.mono {
+  font-family: var(--font-mono), Consolas, monospace;
+}
+
+.cad-shell {
+  position: relative;
+}
+
+.cad-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(95, 111, 133, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 111, 133, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.4;
+}
+
+.cad-slider {
+  background: linear-gradient(to right, #cfd7e3, #aeb9ca);
+}
+
+.cad-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 2px solid #dde3ec;
+}
+
+.cad-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 2px solid #dde3ec;
+}
+
+.sw-theme [class*="bg-slate-"] {
+  background-color: #eef1f6 !important;
+}
+
+.sw-theme [class*="border-slate-"] {
+  border-color: #b4bfce !important;
+}
+
+.sw-theme [class*="text-slate-"] {
+  color: #233247 !important;
+}
+
+.sw-theme [class*="text-cyan-"] {
+  color: #0a64aa !important;
+}
+
+.sw-theme [class*="bg-cyan-"] {
+  background-color: #c8ddf5 !important;
+}
+
+.sw-theme [class*="border-cyan-"] {
+  border-color: #5f96cf !important;
+}
+
+.sw-theme button[class*="hover:bg-slate-"]:hover {
+  background-color: #dde5f0 !important;
+}
